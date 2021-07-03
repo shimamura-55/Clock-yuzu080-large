@@ -28,7 +28,7 @@
 </head>
 <body>
 
-    <div id="sentence">NictJST - 0.85s</div>
+    <div id="sentence">NictJST - 0.80s</div>
     <div id="clock">
         
     </div>
@@ -38,7 +38,7 @@
             const json = await (await fetch('https://3fe5a5f690efc790d4764f1c528a4ebb89fa4168.nict.go.jp/cgi-bin/json')).json();
             const receiveTime = new Date().getTime();
             const serverTime = json.st * 1000 + (receiveTime - sendTime) / 2;
-            const diff = serverTime - receiveTime - 850;
+            const diff = serverTime - receiveTime - 800;
             setInterval(() => {
                 const date = new Date(Date.now() + diff);
                 const hour = ('0' + date.getHours()).slice(-2);
